@@ -44,11 +44,18 @@ export class UserDetailComponent implements OnInit {
       ])
     })
 
+    // Réupération (pour affichage) des infos du User si son id est précisé dans l'URL
     if(this.id){
       this.utilisateur = this.userService.findUserById(this.id);
       this.userForm.patchValue({
         firstname: this.utilisateur.firstname,
-        address: this.utilisateur.address,
+        lastname:this.utilisateur.lastname,
+        gender:this.utilisateur.gender,
+        streetNumber: this.utilisateur.address.streetNumber,
+        street:this.utilisateur.address.street,
+        city:this.utilisateur.address.city,
+        zipcode:this.utilisateur.address.zipcode,
+        country:this.utilisateur.address.country,
         email: this.utilisateur.email
       })
     }
