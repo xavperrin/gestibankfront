@@ -21,6 +21,10 @@ export class UserService{
         }
     }
 
+    /**
+     * Il a été définit que la suppression serait géré dans les classes filles pour ne pas avoir de problème sur la gestion des ID
+     */
+    /*
     deleteUser(user:User):void{
         let idx;
         idx = USERS.indexOf(user);
@@ -29,6 +33,7 @@ export class UserService{
         }
         this.findAll();
     }
+    */
 
     updateUser(user:User):void {
         var OldUser = this.findUserById(user.id);

@@ -26,9 +26,11 @@ export class UserListComponent implements OnInit {
     this.router.navigate(['/user/create']);
   }
 
-  deleteUser(user:User){
+//  Il a été définit que la suppression serait géré dans les classes filles pour ne pas avoir de problème sur la gestion des ID
+/*  deleteUser(user:User){
     this.userService.deleteUser(user);
   }
+*/
 
   editUser(user:User){
     if (user){
